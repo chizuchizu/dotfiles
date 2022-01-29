@@ -30,3 +30,13 @@ do
     ln -snf $DOT_DIR/$f $HOME/.$f
     echo "Installed .$f"
 done
+
+
+cd zsh
+dirs=`find . -type f | gawk -F/ '{print $NF}'`
+for f in $dirs;
+do
+    ln -snf $DOT_DIR/zsh/$f $HOME/.$f
+    echo "Installed zsh: .$f"
+done
+cd ../
