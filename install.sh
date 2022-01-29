@@ -37,8 +37,6 @@ dirs=`find . -type f | gawk -F/ '{print $NF}'`
 for f in $dirs;
 do
     ln -snf $DOT_DIR/zsh/$f $HOME/.$f
-    # echo "${HOME}/${f}"
-    # echo `readlink -f $f`
-    # echo $DOT_DIR/zsh/.$f
+    echo "Installed zsh: .$f"
 done
 cd ../
