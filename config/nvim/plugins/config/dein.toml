@@ -3,9 +3,7 @@
 repo = "neoclide/coc.nvim"
 # on_ft = ["python"]
 merged = 0
-rev = "release"
-hook_add = """
-source ~/.config/nvim/plugins/coc.rc.vim
+rev = "release" hook_add = """ source ~/.config/nvim/plugins/coc.rc.vim
 """
 
 # Dark power
@@ -30,6 +28,8 @@ hook_add = """
 [[plugins]]
 repo = "jiangmiao/auto-pairs"
 hook_add = """
+let g:AutoPairsShortcutFastWrap = "<C-e>"
+let g:AutoPairsShortcutToggle = "<C-a>"
 """
 
 # theme
@@ -123,3 +123,8 @@ repo = "kristijanhusak/defx-icons"
 
 [[plugins]]
 repo = "ryanoasis/vim-devicons"
+
+[[plugins]]
+repo = "glacambre/firenvim"
+hook_add = """
+"""

@@ -53,6 +53,8 @@ if builtin command -v bat > /dev/null; then
   alias cat="bat"
 fi
 
+alias sudo="doas"
+
 # basic
 
 HISTFILE=$ZDOTDIR/.zsh-history
