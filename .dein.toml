@@ -1,0 +1,23 @@
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = """
+let g:airline#extensions#tabline#enabled = 1
+noremap <C-n> <cmd>bn<cr>
+noremap <C-p> <cmd>bp<cr>
+"""
+
+[[plugins]]
+repo = "vim-airline/vim-airline-themes"
+
+[[plugins]]
+repo = "lambdalisue/fern.vim"
+hook_add = """
+" 隠しファイルを表示する
+let g:fern#default_hidden=1
+" Fern .をSpace+eキーに置き換え
+let mapleader = "\<Space>"
+nnoremap <silent> <Leader>e :<C-u>Fern .<CR>
+" inoremap <silent> <Esc> <Esc>:call system('fcitx-remote -c')<CR>
+"""
+
+
