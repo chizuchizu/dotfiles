@@ -17,6 +17,7 @@ let g:fern#default_hidden=1
 " Fern .をSpace+eキーに置き換え
 let mapleader = "\<Space>"
 nnoremap <silent> <Leader>e :<C-u>Fern .<CR>
+:command F Fern .
 " inoremap <silent> <Esc> <Esc>:call system('fcitx-remote -c')<CR>
 """
 
