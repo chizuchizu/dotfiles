@@ -26,9 +26,20 @@ syntax enable
 
 
 syntax on
+" 改行に前の行のインデントを継続する
 set autoindent
+" 相対行表示
 set relativenumber
-set tabstop=4
+" 画面上でtab文字が占める幅
+set tabstop=2
+" 自動インデントでずれる幅
+set shiftwidth=2
+" 連続した空白に対してtabやbsでカーソルが動く幅
+set softtabstop=2
+" tabをspaceに置き換える
 set expandtab
-set modifiable
 
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4
+augroup END

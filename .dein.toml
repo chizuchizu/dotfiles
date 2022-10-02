@@ -36,3 +36,25 @@ let g:ale_linters = {
 \}
 let g:ale_fix_on_save = 1
 """
+
+# color theme
+[[plugins]]
+repo = "tomasr/molokai"
+hook_add="""
+" colorscheme molokai
+"""
+
+[[plugins]]
+repo = "arcticicestudio/nord-vim"
+hook_add="""
+" colorscheme nord
+"""
+
+[[plugins]]
+repo = "morhetz/gruvbox"
+hook_add="""
+colorscheme gruvbox
+set background=dark
+set t_Co=256
+" g:gruvbox_termcolors=106
+"""
