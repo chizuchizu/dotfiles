@@ -24,11 +24,18 @@ cat <<  "EOF"
                                                         |___/
 EOF
 
-dirs=`find config -maxdepth 1 -type d -not -name ".*" | sort -n`
-for f in $dirs;
+# dirs=`find config -maxdepth 1 -type d -not -name ".*" | sort -n`
+# for f in $dirs;
+# do
+#     ln -snf $DOT_DIR/$f $HOME/.$f
+#     echo "Installed .$f"
+# done
+
+files=`find . -maxdepth 1 -type f -name ".*"`
+for f in $files;
 do
-    ln -snf $DOT_DIR/$f $HOME/.$f
-    echo "Installed .$f"
+    ln -snf $DOT_DIR/$f $HOME/$f
+    echo "Installed $f"
 done
 
 
