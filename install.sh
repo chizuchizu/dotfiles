@@ -11,7 +11,7 @@ EOF
 
 
 DOT_DIR="$HOME/dotfiles"
-cd $DOT_DIR
+# cd $DOT_DIR
 
 cat <<  "EOF"
   _____           _        _ _                     __ _       
@@ -32,11 +32,11 @@ do
 done
 
 
-cd zsh
-dirs=`find . -type f | gawk -F/ '{print $NF}'`
-for f in $dirs;
-do
-    ln -snf $DOT_DIR/zsh/$f $HOME/.$f
-    echo "Installed zsh: .$f"
-done
-cd ../
+# cd zsh
+# dirs=`find . -type f | gawk -F/ '{print $NF}'`
+# for f in $dirs;
+# do
+#     ln -snf $DOT_DIR/zsh/$f $HOME/.$f
+#     echo "Installed zsh: .$f"
+# done
+# cd ../
