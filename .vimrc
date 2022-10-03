@@ -29,9 +29,9 @@ syntax on
 " 改行に前の行のインデントを継続する
 set autoindent
 " 相対行表示
-set relativenumber
+" set relativenumber
 " 画面上でtab文字が占める幅
-" set tabstop=2
+set tabstop=2
 " 自動インデントでずれる幅
 set shiftwidth=2
 " 連続した空白に対してtabやbsでカーソルが動く幅
