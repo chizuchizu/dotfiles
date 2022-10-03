@@ -2,8 +2,10 @@
 repo = 'vim-airline/vim-airline'
 hook_add = """
 let g:airline#extensions#tabline#enabled = 1
-noremap <C-n> <cmd>bn<cr>
-noremap <C-p> <cmd>bp<cr>
+" noremap <C-n> <cmd>bn<cr>
+" noremap <C-p> <cmd>bp<cr>
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
 """
 
 [[plugins]]
@@ -16,7 +18,8 @@ hook_add = """
 let g:fern#default_hidden=1
 " Fern .をSpace+eキーに置き換え
 let mapleader = "\<Space>"
-nnoremap <silent> <Leader>e :<C-u>Fern .<CR>
+" nnoremap <silent> <Leader>e :<C-u>Fern .<CR>
+nnoremap <silent> <C-e> :<C-u>Fern .<CR>
 :command F Fern .
 " inoremap <silent> <Esc> <Esc>:call system('fcitx-remote -c')<CR>
 """
