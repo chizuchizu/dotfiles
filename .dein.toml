@@ -62,14 +62,3 @@ set t_Co=256
 " g:gruvbox_termcolors=106
 """
 
-[[plugins]]
-repo = "vim-denops/denops.vim"
-
-[[plugins]]
-repo = 'yuki-yano/fuzzy-motion.vim'
-depends = 'denops.vim'
-if = 'has("nvim")'
-on_cmd = 'FuzzyMotion'
-hook_add = '''
-  nnoremap F   <Cmd>FuzzyMotion<CR>
-'''
