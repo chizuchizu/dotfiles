@@ -1,0 +1,75 @@
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+hook_add = """
+let g:airline#extensions#tabline#enabled = 1
+" noremap <C-n> <cmd>bn<cr>
+" noremap <C-p> <cmd>bp<cr>
+nmap <C-p> <Plug>AirlineSelectPrevTab
+nmap <C-n> <Plug>AirlineSelectNextTab
+"""
+
+[[plugins]]
+repo = "vim-airline/vim-airline-themes"
+
+[[plugins]]
+repo = "lambdalisue/fern.vim"
+hook_add = """
+" 隠しファイルを表示する
+let g:fern#default_hidden=1
+" Fern .をSpace+eキーに置き換え
+let mapleader = "\<Space>"
+" nnoremap <silent> <Leader>e :<C-u>Fern .<CR>
+nnoremap <silent> <C-e> :<C-u>Fern .<CR>
+:command F Fern .
+" inoremap <silent> <Esc> <Esc>:call system('fcitx-remote -c')<CR>
+"""
+
+
+# color theme
+[[plugins]]
+repo = "tomasr/molokai"
+hook_add="""
+" colorscheme molokai
+"""
+
+[[plugins]]
+repo = "arcticicestudio/nord-vim"
+hook_add="""
+" colorscheme nord
+"""
+
+[[plugins]]
+repo = "morhetz/gruvbox"
+hook_add="""
+colorscheme gruvbox
+set background=dark
+set t_Co=256
+" g:gruvbox_termcolors=106
+"""
+
+# black: formatter
+# isort: sort imports
+[[plugins]]
+repo = "dense-analysis/ale"
+hook_add = """
+let g:ale_fixers = {
+    \ "python": ["isort", "black"],
+    \ "cpp": ["clang-format"],
+\}
+let g:ale_linters = {
+    \ "python": ["flake8"],
+\}
+let g:ale_fix_on_save = 1
+let g:ale_set_highlights=1
+"""
+
+
+[[plugins]]
+repo = "neoclide/coc.nvim"
+
+# 括弧を自動でつけてくれる
+[[plugins]]
+repo = "cohama/lexima.vim"
+hook_add = """
+let g:lexima_enable_basic_rules = 1
+"""

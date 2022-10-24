@@ -38,6 +38,13 @@ do
     echo "Installed $f"
 done
 
+echo "===="
+files=`find .config/nvim -type f` 
+for f in $files;
+do
+    ln -snf $DOT_DIR/$f $HOME/$f
+    echo "Installed $f"
+done
 
 # cd zsh
 # dirs=`find . -type f | gawk -F/ '{print $NF}'`
